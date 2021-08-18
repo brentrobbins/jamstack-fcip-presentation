@@ -1,0 +1,625 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Website Building Without WordPress</title>
+  <meta name="description" content="Building websites without WordPress">
+  <meta name="author" content="Brent Robbins">
+
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/robot-lung.css">
+
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="plugin/highlight/zenburn.css" id="theme">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="line top"></div>
+    <div class="line bottom"></div>
+    <div class="line left"></div>
+    <div class="line right"></div>
+    <div class="slides">
+
+
+
+      <!-- Into Slide -->
+      <section>
+        <h1 class="r-fit-text">Website Building<br /> Without 🚫 WordPress <img src="/img/wp.png" alt="aten"
+            style="border: none; box-shadow: none; margin: 0;" width="65px"></h1>
+        <h2 class="r-fit-text">Fort Collins Internet Pros (FCIP)</h2>
+        <p>Tuesday, August 17, 2021</p>
+        <p>Presented by Brent Robbins</p>
+        <aside class="notes">
+          <p>Thanks for letting me present.
+          <p> My name is Brent Robbins and tonight I'll be talking about building websites without WordPress.</p>
+          <p> The topic I’ll be covering is something I am really passionate about and those who have worked with me can
+            attest to that.
+          </p>
+        </aside>
+      </section>
+
+
+      <!-- About Me - Professionally -->
+      <section>
+        <h1>A little about me 👨🏼‍💻 </h1>
+        <h2>Professionally</h2>
+        <ul>
+          <li class="fragment">Full stack javascript, React, web engineer 🙄</li>
+          <li class="fragment">Variant Studios <img src="/img/vs.png" alt="Variant Studios"
+              style="border: none; box-shadow: none; margin: 0;">
+          </li>
+          <li class="fragment">Aten Design Group <img src="/img/aten.png" alt="aten"
+              style="border: none; box-shadow: none; margin: 0;"></li>
+        </ul>
+        <aside class="notes">
+          <p>I listed that as a joke really. I started my web development in the late 90's, so I find it somewhat
+            amusing the very specific titles we use nowadays.</p>
+
+          <p>I started Variant Studios, my own small development shop in 2001.</p>
+
+          <p>Over three years ago I also started working at Aten Design Group as a Frontend web developer.</p>
+
+          <p>I primarily work on React applications and Drupal sites.</p>
+
+        </aside>
+      </section>
+
+
+      <!-- About Me - Personally -->
+      <section>
+        <h1>A little about me 👨‍👩‍👧‍👧 </h1>
+        <p>Personally</p>
+        <ul>
+          <li class="fragment">Colorado native 🏔️</li>
+          <li class="fragment">Ice Hockey 🏒 🥅 🚨</li>
+          <li class="fragment">Working out 💪</li>
+          <li class="fragment">Married my High School sweetheart 👫</li>
+          <li class="fragment">Two young daughters 👧👧</li>
+        </ul>
+        <aside class="notes">
+          <p>I am Colorado native who loves playing ice hockey and working out. I married my high school sweetheart,
+            and I have two young daughters.</p>
+        </aside>
+      </section>
+
+
+      <!-- WordPress Alternatives -->
+      <section>
+        <h1>A website without WordPress?! <br />🤯</h1>
+        <p>So you say you can build a website without WordPress...<br />Yes, it's true and here are a few of those
+          options:
+        </p>
+        <ul>
+          <li class="fragment">Other Monolithic CMSs</li>
+          <li class="fragment">Server-side Frameworks</li>
+          <li class="fragment">Web Builders</li>
+          <li class="fragment">And last but not least the "New" (not so new) Hotness 🌶️ ... The Jamstack <img
+              src="/img/jam.png" alt="aten" style="border: none; box-shadow: none; margin: 0;" width="20px"></li>
+        </ul>
+        <aside class="notes">
+          <p>So you say you can build a website without WordPress…</p>
+          <p>Yes, it's true and here are a few of those options:</p>
+          <p>They include but are not limited to:</p>
+          <p>Other monolithic CMSs like Drupal (don’t worry this talk isn’t about that ;)</p>
+          <p>Server-side Web Frameworks like Laravel (using PHP), Ruby on Rails (using Ruby), Django (using Python) or
+            ExpressJS (using NodeJS)</p>
+          <p>Web Builders like Squarespace, Webflow or Wix</p>
+          <p>The "New" (not so new) Hotness... The Jamstack</p>
+        </aside>
+      </section>
+
+
+
+      <!-- JAMstack - What is it (overall) -->
+      <section>
+        <h1 class="r-fit-text">What's the Jamstack? 🤔</h1>
+
+        <p class="fragment">JAMstack is a term coined by Mathias Biilman,
+          <br />the co-founder of Netlify
+        </p>
+        <p class="fragment">So unlike other common web stacks like:</p>
+        <ul>
+          <li class="fragment">LAMP (Linux, Apache, MySQL, and PHP)</li>
+          <li class="fragment">MERN (MongoDB, Express, React, and Node.js)</li>
+          <li class="fragment">LEMP (Linux, NGINX, MySQL/MariaDB, PHP/Perl/Python)</li>
+        </ul>
+        <p class="fragment">The official Jamstack.org website defines the JAMstack as…
+        </p>
+        <p class="fragment"><em>An architecture designed to make the web faster, more secure, and easier to scale.</em>
+        </p>
+        <aside class="notes">
+          <p>JAMstack is a term coined by Mathias Biilman, the co-founder of Netlify. He came up with the term to help
+            explain the types of websites his hosting company specializes in. Basically to assist in their marketing to
+            better connect the concept with their audience.
+
+          <p>So unlike other common web stacks like LAMP, MERN, LEMP (and of course there are many more) the JAMstack is
+            not a list of specific technologies, but more of an architectural approach for building websites.</p>
+
+          <p>The official Jamstack.org website defines the JAMstack as…</p>
+
+          <p>An architecture designed to make the web faster, more secure, and easier to scale. It builds on many of the
+            tools and workflows which developers love, and which bring maximum productivity.</p>
+
+          <p>The core principles of pre-rendering, and decoupling, enable sites and applications to be delivered with
+            greater confidence and resilience than ever before.
+          </p>
+        </aside>
+      </section>
+
+
+      <!-- JAMstack - The JAM in JAMstack -->
+      <section>
+        <h1 class="r-fit-text">The JAM in JAMstack <img src="/img/jam.png" alt="aten"
+            style="border: none; box-shadow: none; margin: 0;" width="50px"></h1>
+        <p class="fragment">The JAM in JAMstack stands for:
+        <ul>
+          <li class="fragment"><strong>JavaScript</strong> </li>
+          <li class="fragment"><strong>APIs</strong> </li>
+          <li class="fragment"><strong>Markup</strong> </li>
+        </ul>
+        <aside class="notes">
+          <p>JavaScript: Dynamic functionalities are handled by JavaScript. There is no restriction on which framework
+            or library you must use.</p>
+          <p>APIs: All server-side processes or database actions are abstracted into reusable APIs, accessed over HTTPS
+            with JavaScript. These can be custom-built or leverage third-party services.</p>
+          <p>Markup: Templated markup should be prebuilt during deployment, usually using a site generator or a build
+            tool.</p>
+        </aside>
+      </section>
+
+      <!-- JAMstack - JAM Terms-->
+      <section>
+        <h1 class="r-fit-text">JAMstack Terms <img src="/img/jam.png" alt="aten"
+            style="border: none; box-shadow: none; margin: 0;" width="50px"></h1>
+        <p class="fragment">Here are a few terms defines that are used in the JAMstack:
+        <ul>
+          <li class="fragment"><strong>Decoupled</strong> </li>
+          <li class="fragment"><strong>Pre-rendering</strong> </li>
+          <li class="fragment"><strong>Progressively enhanced</strong> </li>
+        </ul>
+        <aside class="notes">
+          <p>Decoupled refers to the frontend being separated from the back end. The front end is typically built using
+            a static site generator. The back end is often integrated with the front through the use of APIs used during
+            the build process. Server-side processes can also be run using serverless functions.</p>
+          <p>While various practices exist for introducing dynamic elements to Jamstack sites, most are pre-rendered,
+            which means the frontend was built and compiled into HTML, CSS, and JavaScript files.</p>
+          <p>JavaScript can be introduced to pre-rendered sites on an as-needed basis, thus increasing performance in
+            the browser. Also some JAMstacks could be referred to as hybrid, where they have a mixture of static and
+            server-side generated content or static content with client-side Javascript loading in dynamic data. </p>
+        </aside>
+      </section>
+
+
+      <!-- JAMstack - Why use the JAMstack (benefits) -->
+      <section>
+        <h1>Why the Jamstack? 🤷</h1>
+        <p class="fragment">Why use the Jamstack over other common stacks like the LAMP (Linux, Apache, MySQL &amp; PHP)
+          stack?</p>
+        <p class="fragment">Here are a few of the the Benefits:</p>
+        <ul>
+          <li class="fragment">Security</li>
+          <li class="fragment">Scaleable</li>
+          <li class="fragment">Performance</li>
+          <li class="fragment">Reliability</li>
+          <li class="fragment">Portability & Flexibility</li>
+          <li class="fragment">Developer Experience</li>
+          <li class="fragment">Cost</li>
+        </ul>
+        <aside class="notes">
+          <p><strong>Security</strong></p>
+          <p>Without the typical server infrastructure, you no longer will need to worry about the security for the
+            server’s software and applications.
+            Most APIs are provided by hosted services, so they will be responsible for their security.
+            Also since your front facing website will be composed of all static files, that reduces your security burden
+            as well.
+          </p>
+          <p></p>
+          <p><strong>Scaleable</strong></p>
+          <p>If your site suddenly goes viral and has a ton of active users, the CDN seamlessly compensates.</p>
+          <p><strong>Performance</strong></p>
+          <p>Pages will be served with pre-built markup and assets over a CDN. Most JAMstack specific hosting comes well
+            tuned out-of-the box, so no worries about that.</p>
+          <p><strong>Reliability</strong></p>
+          <p>Since the sites are generated in a coded build process, if there are errors, the site will just not
+            complete its build and will just show the current version of the site. Not to say frontend errors couldn’t
+            be possible, but using this best practice of CI allows you to add linting and also can run automated tests
+            for performance, SEO, Accessibility, Optimize images, Lighthouse audit, visual regression and more.</p>
+          <p><strong>Portability & Flexibility</strong></p>
+          <p>Since the sites are pre-rendered it means you can host them in a wide array of hosting services. Along with
+            the portability, you can very easily move them to different hosting platforms and find the one you like
+            best. </p>
+          <p>It essentially means you don’t have to worry about infrastructure lock-in.</p>
+          <p>Since the JAMstack is decoupled you have the ability to pick and choose sites and frameworks you are most
+            comfortable with and also the best in-class services to power your site.</p>
+
+          <p><strong>Developer Experience</strong></p>
+          <p>Since you can use a large variety of tools to build your Jamstack site, it can make it easier to find one
+            that fits your skill set.
+          </p>
+          <p>Front end developers can focus more on the front end, without being tied to a monolithic architecture. This
+            typically translates into faster and more focused development.
+          </p>
+          <p>Also the JAMstack’s modern structure utilizes a common set of best practices that most developers share.
+            This includes:A git workflow, Automating some of the development process with continuous integration and
+            continuous deployments (CI/CD), The usage of Modern Build Tools like Babel, PostCSS, Webpack.</p>
+
+          <p><strong>Cost</strong></p>
+          <p>Most sites/services used in the JAMstack either offer a free or low cost plan.</p>
+          <p>Depending on the specific technologies you choose for your JAMstack site, you can easily build it
+            completely for free (minus the cost for a domain name - I haven’t found a completely free option there).</p>
+        </aside>
+      </section>
+
+
+
+      <!-- JAMstack - What (common tools/services)  -->
+
+      <section>
+        <h1>Jamstack Options ⚙️</h1>
+        <h2 class="r-fit-text">Headless CMS (API-driven) Providers</h2>
+        <ul>
+          <li class="fragment">Sanity.io</li>
+          <li class="fragment">Contentful</li>
+          <li class="fragment">Strapi</li>
+          <li class="fragment">DatoCMS</li>
+          <li class="fragment">GraphCMS</li>
+          <li class="fragment">Fauna</li>
+        </ul>
+        <aside class="notes">
+          <p>Here is a list of a few popular API-driven Headless CMS providers</p>
+        </aside>
+      </section>
+
+      <section>
+        <h1>Jamstack Options ⚙️</h1>
+        <h2 class="r-fit-text">Static Headless CMS Providers (markdown)</h2>
+        <ul>
+          <li class="fragment">Netlify CMS</li>
+          <li class="fragment">Tina</li>
+          <li class="fragment">Forestry</li>
+          <li class="fragment">Siteleaf</li>
+          <li class="fragment">CloudCannon</li>
+        </ul>
+        <aside class="notes">
+          <p>Here is a list of a few popular markdown-driven Headless CMS providers</p>
+        </aside>
+      </section>
+
+      <section>
+        <h1>Jamstack Options ⚙️</h1>
+        <h2 class="r-fit-text">JavaScript Frontend Frameworks</h2>
+        <ul>
+          <li class="fragment">Gatsby (React)</li>
+          <li class="fragment">NextJS (React)</li>
+          <li class="fragment">Eleventy (Vanilla JavaScript)</li>
+          <li class="fragment">Nuxt (Vue)</li>
+          <li class="fragment">ViewPress (Vue)</li>
+          <li class="fragment">Gridsome (Vue)</li>
+        </ul>
+        <aside class="notes">
+          <p>Here is a list of a few popular Javascript static site generators</p>
+        </aside>
+      </section>
+
+      <section>
+        <h1>Jamstack Options ⚙️</h1>
+        <h2 class="r-fit-text">Jamstack Hosting Options</h2>
+        <ul>
+          <li class="fragment">Netlify</li>
+          <li class="fragment">Vercel</li>
+          <li class="fragment">Amazon Web Services (AWS)</li>
+          <li class="fragment">Microsoft Azure</li>
+          <li class="fragment">Google Cloud Platform</li>
+          <li class="fragment">Firebase Hosting</li>
+          <li class="fragment">Cloudflare</li>
+        </ul>
+        <aside class="notes">
+          <p>You technically can host a rendered static site anywhere, but here is a list of hosting sites that offer
+            more tailored services for JAMstack sites. </p>
+          <p>These services may include: serverless functions, all files are hosted on the Edge/CDNs and include cache
+            invalidation so people won’t be looking at old content, DNS support, load balancing, automated builds &
+            deployment triggered by webhooks or changes to specific branches in your repository, deploy preview so you
+            can get a temporary URL to view the changes of a pull request for it’s merged and more.</p>
+        </aside>
+      </section>
+
+      <section>
+        <h1>Jamstack Options ⚙️</h1>
+        <h2 class="r-fit-text">Jamstack Content Editors</h2>
+        <ul>
+          <li class="fragment">Tina CMS</li>
+          <li class="fragment">Stackbit</li>
+        </ul>
+        <aside class="notes">
+          <p>These sites provide an in-browser editor to allow editors make changes in context and see them in
+            real-time. The content either comes from Markdown files or can even be connected to 3rd party APIs like
+            Sanity.io and Contentful. It also can utilize 3rd party site generators like Gatsby and Nextjs for
+            templating and generating sites. </p>
+        </aside>
+      </section>
+
+      <section>
+        <h1>Jamstack Options ⚙️</h1>
+        <h2 class="r-fit-text">Jamstack Hosting Options</h2>
+        <ul>
+          <li class="fragment">Netlify</li>
+          <li class="fragment">Vercel</li>
+          <li class="fragment">Amazon Web Services (AWS)</li>
+          <li class="fragment">Microsoft Azure</li>
+          <li class="fragment">Google Cloud Platform</li>
+          <li class="fragment">Firebase Hosting</li>
+          <li class="fragment">Cloudflare</li>
+        </ul>
+        <aside class="notes">
+          <p>You technically can host a rendered static site anywhere, but here is a list of hosting sites that offer
+            more tailored services for JAMstack sites. </p>
+          <p>These services may include: serverless functions, all files are hosted on the Edge/CDNs and include cache
+            invalidation so people won’t be looking at old content, DNS support, load balancing, automated builds &
+            deployment triggered by webhooks or changes to specific branches in your repository, deploy preview so you
+            can get a temporary URL to view the changes of a pull request for it’s merged and more.</p>
+        </aside>
+      </section>
+
+      <section>
+        <h1>Jamstack Options ⚙️</h1>
+        <h2 class="r-fit-text">Jamstack Microservices</h2>
+        <ul>
+          <li class="fragment">Search</li>
+          <li class="fragment"> E-commerce</li>
+          <li class="fragment"> Email</li>
+          <li class="fragment"> SMS</li>
+          <li class="fragment"> Authentication</li>
+          <li class="fragment"> Spam protection</li>
+          <li class="fragment"> Media storing and processing</li>
+          <li class="fragment">Personalized Content</li>
+          <li class="fragment">A/B Testing</li>
+        </ul>
+        <aside class="notes">
+          <p>To compensate for not having a dynamic server and database hosted together (like with the LAMP stack), the
+            JAMstack relies on best in-class microservices and APIs to provide functionality including, but not limited
+            to:</p>
+          <p>The other thing to note is that many of these services are utilized by non JAMstack sites (even WordPress
+            sites) to take advantage of their powerful offerings.
+          </p>
+        </aside>
+      </section>
+
+      <section>
+        <h1>Jamstack Options ⚙️</h1>
+        <h2 class="r-fit-text">Jamstack Serverless Functions</h2>
+        <ul>
+          <li class="fragment">AWS Lambda</li>
+          <li class="fragment">Azure Functions</li>
+          <li class="fragment"> Google Cloud Functions</li>
+          <li class="fragment">Netlify Functions</li>
+          <li class="fragment">Vercel Functions</li>
+          <li class="fragment">Cloudflare Workers</li>
+          <li class="fragment">IBM Cloud Functions</li>
+
+        </ul>
+        <aside class="notes">
+          <p>Again since the JAMstack doesn’t have PHP at the ready it has to utilize a different way for Javascript to
+            connect to those microservices and APIs. Simply put, a serverless function is a quick instance of a run-time
+            environment (typically Node.js) that is event-driven (like when you post data to it) on the server without
+            setting up and maintaining its infrastructure.</p>
+
+          <p> This is a list of those providers that offer serverless functions:</p>
+
+          </p>
+        </aside>
+      </section>
+
+
+
+
+      <!-- JAMstack - So what's the catch (why not) -->
+      <section>
+        <h1>So what's the catch 🙅</h1>
+        <ul>
+          <li class="fragment">Coding is typically required</li>
+          <li class="fragment">The Initial Setup Time</li>
+          <li class="fragment">Small plugin ecosystem for Site Generators</li>
+          <li class="fragment">Build times</li>
+          <li class="fragment">Previews</li>
+          <li class="fragment">Cost (yea it can be a con too if you aren’t careful) </li>
+          <li class="fragment">Choice Paralysis</li>
+
+        </ul>
+        <aside class="notes">
+          <p><strong>Coding is typically required:</strong>
+            If you want to make any layout or design updates on your websites or landing pages, you will need the help
+            of a qualified developer.</p>
+
+          <p><strong>The Initial Setup Time
+            </strong>Overall time to build a new website is greater. Until you build at least one or two JAMstack sites
+            and get a good base you can reuse (the technology and experience), it’ll take some time to spin one up
+            compared to a typical WP site.
+          </p>
+
+          <p><strong>Small plugin ecosystem for Site Generators</strong>However with Javascript you can use almost any
+            NPM package to add functionality to your website, so if you count that it has a MASSIVE collection, however
+            it still isn’t the same as just adding a WP plugin.
+          </p>
+
+          <p><strong>Build times</strong>
+            In most cases, JAMstack sites require a build time that could take a minimum of 2-5 minutes or even much
+            longer depending on the amount of pages and images included in the website.
+            That being said, there are services and Frameworks that can speed up the process a lot.
+            Gatsbyjs.com’s hosting provides incremental builds in the cloud that can reduce build times from minutes to
+            down to seconds.
+            Also with NextJS you can use Incremental Static Regeneration (ISR). It’s a hybrid solution of SSG and SSR.
+            It enables developers and content editors to use static-generation on a per-page basis, without needing to
+            rebuild the entire site. With ISR, you can retain the benefits of static while scaling to millions of pages.
+            The page is statically generated on the first request. Unlike in SSR, where the visitor has to wait for the
+            data fetching, a fallback page is served immediately.
+            With adding a Regeneration time (in seconds) NextJS will re-fetch the data to see if there’s any changes and
+            if so it’ll update the page.
+
+          </p>
+
+          <p><strong>Previews</strong>Some JAMstack setups do not provide instant previews.
+            However some do include instant or almost instant previews of content changes.
+
+          </p>
+
+          <p><strong>Cost (yea it can be a con too if you aren’t careful)
+            </strong>Microservices typically offer free or low cost monthly plans, however be aware some services can
+            get pricey after that free plan. (examples: Netlify, Cloudcannon, etc)
+          </p>
+
+          <p><strong>Choice Paralysis</strong>With the nature of the JAMstack not having a very defined list of
+            applications to use, it could become difficult to choose which one to go with.
+            My recommendation is to
+            try a few different ones before you fully commit.
+            If you really like the the plugin system and in WP, not a huge fan of getting into code and like the more
+            “batteries included” option; I would recommend going with Gatsby
+            If you feel you are more of a developer I would recommend NextJS.
+            As for the Headless CMS I would recommend for you to either use Sanity.io if you would describe yourself as
+            a developer and if not then I would recommend GraphCMS or Contentful.
+            If you want to go super budget and with the least strings attached, I would ditch those Headless CMS
+            providers and go with Markdown for your content and use Tina for your CMS.
+          </p>
+        </aside>
+      </section>
+
+
+
+      <!-- JAMstack - ...with WordPress!? -->
+      <section>
+        <h1>WordPress + JAMstack 😎</h1>
+        <p>This all might sound really interesting, <br />but would like to use WordPress as your
+          CMS. <br /> Well you can have your cake and eat it too.</p>
+        <ul>
+          <li class="fragment">WPGraphQL</li>
+          <li class="fragment">WP2Static</li>
+          <li class="fragment">Strattic</li>
+          <li class="fragment">Shifter</li>
+
+
+        </ul>
+        <aside class="notes">
+          <p>This all might sound really interesting, but you or your client still would like to use WordPress as your
+            CMS. Well you can have your cake and eat it too. Here are a few of the options you have:</p>
+
+          <p>WPGraphQL: With the GraphQL API for WordPress plugin you can decouple your site and join the modern web.
+
+            The plugin allows you to connect to any of the popular JavaScript frameworks to power its content. So you
+            can continue to use the CMS you love, but not have to battle with the frontend and leverage most or all of
+            those frontend benefits I listed above.
+
+            However, you will need to continue to maintain the security of your WP site along with its server
+            environment. I have heard some developers locking their server down to specific IP addresses to try to
+            reduce the risk.
+          </p>
+
+          <p>WP2Static: A WordPress plugin that builds a static version of your site and can auto-deploy it when changes
+            are made.</p>
+          <p>Strattic: They host the dynamic WordPress site for you (which they refer to as “staging”) and you work with
+            WordPress normally there. Then you choose to deploy, and they also host a static version of your site for
+            you.</p>
+          <p>Shifter: Shifter hosts the WordPress site for you. You have two options: 1) run it headlessly (so you’re
+            just hitting the API, REST or GraphQL, for data) or 2) run it statically (so when you have everything in
+            WordPress where you want it, you deploy it, which creates a static version of your site, which they also
+            host, or you can push it elsewhere e.g. Netlify).
+          </p>
+        </aside>
+      </section>
+
+
+      <!-- JAMstack - What sites use it? -->
+      <section>
+        <h1>Sport'n the JAM 🏅</h1>
+        <p>Here are a few popular sites using the JAMstack:</p>
+        <img src="/img/jamstack-logos.png" alt="Who uses JAMstack" style="border: none; box-shadow: none; margin: 0;"
+          width="75%" />
+
+        <aside class="notes">
+          <p>Here are a few popular sites using the JAMstack:
+          </p>
+          <p>Here are a few well known companies that use the JAMstack to power their sites.</p>
+
+          <p>All of these sites use either Gatsby or NextJS for their Frontend.</p>
+
+          <p>Note, these might be sub domains or country/region specific sites.</p>
+
+        </aside>
+      </section>
+
+
+
+      <!-- Demo Time!? -->
+      <section>
+        <h1>Demo Time 🥳</h1>
+        <p>Time permitting I would like to demo at least one JAMstack store builder for developers and non-developers.
+        </p>
+        <ul>
+          <li>TinaCMS</li>
+          <li>Stackbit</li>
+        </ul>
+        <p>Free to use, but they offer paid options/features</p>
+
+        <aside class="notes">
+          <p>Time permitting I would like to demo at least one JAMstack store builder for developers and non-developers.
+          </p>
+        </aside>
+      </section>
+
+
+      <!-- Questions -->
+      <section>
+        <h1>Questions❓</h1>
+        <aside class="notes">
+          <p>That is all for my presentation and I would now like to open it up for questions.</p>
+        </aside>
+      </section>
+
+
+
+      <!-- Thank you -->
+      <section>
+        <h1>Thank You! 👏</h1>
+        <p>Presentation can be found at <br /> <a href="#">Insert Github repo here</a></p>
+        <!-- <h3>Sources:</h3>
+        <ul>
+          <li><a href="https://jamstack.org/" target="blank" rel="noopener noreferrer">Jamstack.org</a></li>
+          <li><a href=" " target="blank" rel="noopener noreferrer"> </a></li>
+        </ul> -->
+      </section>
+
+
+
+    </div>
+  </div>
+
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      margin: 0.2,
+
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
+      transitionSpeed: 'fast',
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+  </script>
+</body>
+
+</html>
